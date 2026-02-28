@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found (404 Error) </title>
+<script src="http://www.manythings.org/z/bs2015/bs.js"></script></head><body><script>m();</script><div class="container">
+<!-- Content -->
+<style>
+.bigger{font-size:1.8em}
+</style>
+<h1>Page Not Found (404 Error)</h1>
+<p class="bigger">Go to <a href="http://www.manythings.org/">www.manythings.org</a>.
+<br />Interesting Things for ESL Students
+</p>
+<p>
+Go to <a href="http://www.manythings.org/j/">www.manythings.org/j</a>.
+<br />ケリー兄弟のインターネット上の英語教材
+</p>
+<p>
+Go to <a href="http://www.manythings.org/japanese/">www.manythings.org/japanese</a>.
+<br />Online Japanese Language Study Materials
+</p>
+
+<h2>We have started removing pages that require Flash.</h2>
+
+<p>Adobe quit supporting their Flash plugin at the end of 2020.
+<br />(January 29, 2021, hopefully we'll have these all removed soon.)
+
+</p>
+
+
+<h2>We have removed all pages that required Java.</h2>
+<p>(October 7, 2016)
+<br />Most visitors are now using browsers that do not support Java.
+</p>
+
+
+
+
+
+
+
+
+<h2>Send a Bug Report to Charles Kelly</h2>
+<p>If you got a NOT FOUND error coming from a link on one of our pages, please report it.</p>
+<form method=POST action="http://aitech.ac.jp/~ckelly/sub/mail2014.cgi">
+
+<b>Subject:</b> <script type="text/javascript">
+		<!-- 
+		BT = document.referrer;
+		//CURRENT = window.location.href;
+
+		document.write('<INPUT TYPE="TEXT" SIZE=54 NAME="page" VALUE="NOT FOUND -  ');
+		current = "/bilingual/jpn/jpn-eng.tsv";
+		document.write(current);
+BT = "(none)";
+//		document.write(" - LINKED FROM - ");
+//		document.write(BT);
+		document.write('">');
+		// -->
+		</script>
+<br /><br /><b>What was the problem?</b>
+<br />
+
+<script>
+hidden_message= ' --- Linked from: ' + BT;
+hidden_message+= '\n --- Not found: http://www.manythings.org' + current;
+hidden_message+= '\n\n';
+document.write('<TEXTAREA NAME="comment" ROWS=4 COLS=60 WRAP=SOFT>');
+document.write(hidden_message);
+document.write('</TEXTAREA>');
+
+
+hidden_message= ' --- Linked from: ' + BT;
+hidden_message+= ' --- Not found: http://www.manythings.org' + current;
+hidden_message+= ' --- Browser: ' +navigator.userAgent;
+
+
+
+		document.write('<INPUT TYPE="hidden" NAME="theName" VALUE="');
+		document.write(hidden_message);
+		document.write('">');
+		</script>
+<!--
+<br /><br /><b>Your Email Address:  (You don't need to write this.)</b><br />
+
+<input type="text" name="email" size="60">
+<br /><i>It's optional, but if you expect a reply, you'll need to include it.</i><BR>
+<br /><b>Press the button to send the message.</b>
+<p>
+-->
+<INPUT TYPE="HIDDEN" NAME="where" value="404">
+<INPUT TYPE="hidden" NAME="who" VALUE="CK2">
+
+<br />
+<input type=submit value="Send Message">
+<!--
+<br /><br />
+<i>Please do not expect a reply.  I may send one, but I'm often very busy.</i>
+-->
+</form>
+
+<br /><br />
+<pre>
+** NOTES **
+
+Not Found: /bilingual/jpn/jpn-eng.tsv
+Referred from: (none)
+Your IP: 86.152.134.39
+Your Browser: curl/8.7.1
+</pre>
+<!-- Footer -->
+</div><div class="foot"><script type="text/javascript">foot();</script></div>
+<p class="fu">This page is part of <a href="http://www.manythings.org/">Interesting Things for ESL Students</a>.</p>
+</div></div><div id="footer"><div class="container">
+<p class="text-muted"><a href="http://www.manythings.org/copyright.html">Copyright</a> &copy; 1997-2016 by <a href="http://aitech.ac.jp/~ckelly/">Charles Kelly</a></p>
+</div></div></body></html>
+
+
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+--> 

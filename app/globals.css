@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif-jp: "Noto Serif JP", "Shippori Mincho", serif;
+  --font-body: "Shippori Mincho", "Noto Serif JP", serif;
+}
+
+.dark {
+  --c-bg: #1a1612;
+  --c-bg-raised: #231f1a;
+  --c-bg-hover: #2e2923;
+  --c-border: #3d362e;
+  --c-border-hover: #5c5245;
+  --c-text: #e8e0d4;
+  --c-text-secondary: #a89e90;
+  --c-text-muted: #6d6356;
+  --c-accent: #c4956a;
+  --c-accent-hover: #d4a87a;
+  --c-red: #c47070;
+  --c-red-bg: rgba(196, 112, 112, 0.15);
+  --c-red-border: rgba(196, 112, 112, 0.3);
+  --c-green: #7db07d;
+  --c-green-bg: rgba(125, 176, 125, 0.15);
+  --c-green-border: rgba(125, 176, 125, 0.3);
+  --c-bar-bg: #2e2923;
+}
+
+.light {
+  --c-bg: #f5f0e8;
+  --c-bg-raised: #fffbf5;
+  --c-bg-hover: #efe9df;
+  --c-border: #d6cfc3;
+  --c-border-hover: #b8ae9e;
+  --c-text: #2c2418;
+  --c-text-secondary: #6b5e4f;
+  --c-text-muted: #9e937f;
+  --c-accent: #8b5e3c;
+  --c-accent-hover: #a0714f;
+  --c-red: #a04040;
+  --c-red-bg: rgba(160, 64, 64, 0.1);
+  --c-red-border: rgba(160, 64, 64, 0.25);
+  --c-green: #4a7a4a;
+  --c-green-bg: rgba(74, 122, 74, 0.1);
+  --c-green-border: rgba(74, 122, 74, 0.25);
+  --c-bar-bg: #d6cfc3;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
