@@ -17,10 +17,24 @@ export function LevelSelect({ onSelect }: LevelSelectProps) {
     <div className="flex flex-col items-center gap-10">
       <div className="text-center">
         <h1
-          className="text-5xl font-bold mb-3 tracking-wide"
-          style={{ fontFamily: "var(--font-serif-jp)", color: "var(--c-text)" }}
+          className="mb-3 inline-flex items-baseline gap-1 tracking-wide leading-none"
+          style={{ color: "var(--c-text)" }}
         >
-          文<span className="text-3xl" style={{ color: "var(--c-accent)" }}>show</span>
+          <span
+            className="text-6xl font-bold"
+            style={{ fontFamily: "var(--font-serif-jp)" }}
+          >
+            文
+          </span>
+          <span
+            className="text-5xl font-semibold"
+            style={{
+              color: "var(--c-accent)",
+              fontFamily: "'Avenir Next', 'Helvetica Neue', sans-serif",
+            }}
+          >
+            show
+          </span>
         </h1>
         <p
           className="text-sm tracking-widest uppercase"

@@ -13,7 +13,7 @@ import { DataAttribution } from "./components/DataAttribution";
 export default function App() {
   const [phase, setPhase] = useState<AppPhase>("select-level");
   const [selectedLevel, setSelectedLevel] = useState<JLPTLevel>("N4");
-  const { theme, toggle: toggleTheme } = useTheme();
+  const { mode, palette, setTheme } = useTheme();
   const { direction, toggle: toggleDirection } = useWritingDirection();
   const { fontStyle, toggle: toggleFontStyle } = useFontStyle();
 
@@ -29,8 +29,9 @@ export default function App() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <ThemeToggle
-        theme={theme}
-        onToggle={toggleTheme}
+        mode={mode}
+        palette={palette}
+        onSelectTheme={setTheme}
         writingDirection={direction}
         onToggleDirection={toggleDirection}
         fontStyle={fontStyle}

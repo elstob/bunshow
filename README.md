@@ -26,7 +26,8 @@ yarn build:sentences
 
 - Click Japanese text to toggle furigana.
 - Click any kanji in the sentence card to open a Jisho lookup.
-- Top-right controls include: guide (`?`), sentence font style (`Aa` classical/modern), text direction, and theme.
+- Top-right controls include: guide (`?`), sentence font style (`Aa` classical/modern), text direction, and a theme picker.
+- Theme picker options: Kissa Dark, Kissa Light, Sakura Dark, Sakura Light.
 
 ## Sentence Data License
 
