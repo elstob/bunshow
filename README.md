@@ -22,6 +22,12 @@ yarn download:tatoeba
 yarn build:sentences
 ```
 
+## Study Controls
+
+- Click Japanese text to toggle furigana.
+- Click any kanji in the sentence card to open a Jisho lookup.
+- Top-right controls include: guide (`?`), sentence font style (`Aa` classical/modern), text direction, and theme.
+
 ## Sentence Data License
 
 Sentence examples are adapted from Tatoeba data via ManyThings.org (`scripts/jpn.txt`).

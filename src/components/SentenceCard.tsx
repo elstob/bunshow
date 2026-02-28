@@ -1,11 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 import type { Sentence, FuriSegment } from "../types";
 import type { WritingDirection } from "../hooks/useWritingDirection";
+import type { FontStyle } from "../hooks/useFontStyle";
 
 interface SentenceCardProps {
   sentence: Sentence;
   onResult: (understood: boolean) => void;
   writingDirection: WritingDirection;
+  fontStyle: FontStyle;
 }
 
 const KANJI_REGEX = /[\u4e00-\u9faf\u3400-\u4dbf]/;
@@ -15,7 +17,7 @@ function renderKanjiLinks(text: string) {
     KANJI_REGEX.test(char) ? (
       <a
         key={i}
-        href={`https://www.wanikani.com/search?query=${char}`}
+        href={`https://jisho.org/search/${encodeURIComponent(char)}`}
         target="_blank"
         rel="noopener noreferrer"
         style={{ color: "inherit", textDecoration: "none" }}
@@ -63,7 +65,15 @@ function renderFuriganaSegments(
   });
 }
 
-export function SentenceCard({ sentence, onResult, writingDirection }: SentenceCardProps) {
+const CLASSICAL_FONT = "\"Noto Serif JP\", \"Shippori Mincho\", serif";
+const MODERN_FONT = "\"Noto Sans JP\", \"Hiragino Sans\", \"Yu Gothic\", sans-serif";
+
+export function SentenceCard({
+  sentence,
+  onResult,
+  writingDirection,
+  fontStyle,
+}: SentenceCardProps) {
   const [revealed, setRevealed] = useState(false);
   const [showFurigana, setShowFurigana] = useState(false);
 
@@ -109,7 +119,7 @@ export function SentenceCard({ sentence, onResult, writingDirection }: SentenceC
         <p
           className="text-3xl font-medium leading-relaxed cursor-pointer select-none"
           style={{
-            fontFamily: "var(--font-serif-jp)",
+            fontFamily: fontStyle === "modern" ? MODERN_FONT : CLASSICAL_FONT,
             color: "var(--c-text)",
             writingMode: writingDirection === "vertical" ? "vertical-rl" : "horizontal-tb",
             textOrientation: writingDirection === "vertical" ? "upright" : "mixed",
@@ -118,7 +128,6 @@ export function SentenceCard({ sentence, onResult, writingDirection }: SentenceC
             lineHeight: writingDirection === "vertical" ? "1.8" : "1.5",
           }}
           onClick={(e) => {
-            // Don't toggle if clicking a kanji link
             if ((e.target as HTMLElement).tagName === "A") return;
             setShowFurigana((v) => !v);
           }}

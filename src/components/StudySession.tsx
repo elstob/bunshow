@@ -1,6 +1,7 @@
 import { useEffect, useCallback, useRef } from "react";
 import type { JLPTLevel } from "../types";
 import type { WritingDirection } from "../hooks/useWritingDirection";
+import type { FontStyle } from "../hooks/useFontStyle";
 import { useDifficulty } from "../hooks/useDifficulty";
 import { useGrammarTracker } from "../hooks/useGrammarTracker";
 import { useSentenceGenerator } from "../hooks/useSentenceGenerator";
@@ -12,9 +13,15 @@ interface StudySessionProps {
   initialLevel: JLPTLevel;
   onExit: () => void;
   writingDirection: WritingDirection;
+  fontStyle: FontStyle;
 }
 
-export function StudySession({ initialLevel, onExit, writingDirection }: StudySessionProps) {
+export function StudySession({
+  initialLevel,
+  onExit,
+  writingDirection,
+  fontStyle,
+}: StudySessionProps) {
   const { score, currentLevel, recordSuccess, recordFailure } =
     useDifficulty(initialLevel);
   const { weaknesses, recordMiss, clearAll } = useGrammarTracker();
@@ -128,6 +135,7 @@ export function StudySession({ initialLevel, onExit, writingDirection }: StudySe
           sentence={sentence}
           onResult={handleResult}
           writingDirection={writingDirection}
+          fontStyle={fontStyle}
         />
       )}
 

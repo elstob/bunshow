@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { JLPTLevel, AppPhase } from "./types";
 import { useTheme } from "./hooks/useTheme";
 import { useWritingDirection } from "./hooks/useWritingDirection";
+import { useFontStyle } from "./hooks/useFontStyle";
 import { LevelSelect } from "./components/LevelSelect";
 import { StudySession } from "./components/StudySession";
 import { ThemeToggle } from "./components/ThemeToggle";
@@ -14,6 +15,7 @@ export default function App() {
   const [selectedLevel, setSelectedLevel] = useState<JLPTLevel>("N4");
   const { theme, toggle: toggleTheme } = useTheme();
   const { direction, toggle: toggleDirection } = useWritingDirection();
+  const { fontStyle, toggle: toggleFontStyle } = useFontStyle();
 
   const handleLevelSelect = (level: JLPTLevel) => {
     setSelectedLevel(level);
@@ -31,6 +33,8 @@ export default function App() {
         onToggle={toggleTheme}
         writingDirection={direction}
         onToggleDirection={toggleDirection}
+        fontStyle={fontStyle}
+        onToggleFontStyle={toggleFontStyle}
       />
 
       {phase === "select-level" && (
@@ -42,6 +46,7 @@ export default function App() {
           initialLevel={selectedLevel}
           onExit={handleExit}
           writingDirection={direction}
+          fontStyle={fontStyle}
         />
       )}
 

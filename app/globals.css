@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif-jp: "Noto Serif JP", "Shippori Mincho", serif;
   --font-body: "Shippori Mincho", "Noto Serif JP", serif;
+  --font-serif-jp: "Noto Serif JP", "Shippori Mincho", serif;
+}
+
+.font-classical {
+  --font-body: "Shippori Mincho", "Noto Serif JP", serif;
+  --font-serif-jp: "Noto Serif JP", "Shippori Mincho", serif;
+}
+
+.font-modern {
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-serif-jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
 }
 
 .dark {
